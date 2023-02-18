@@ -1,0 +1,184 @@
+{
+  "id": "2683668",
+  "name": "前端框架2.0",
+  "font_family": "ym-icon",
+  "css_prefix_text": "ym-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21823947",
+      "name": "warning-outline",
+      "font_class": "warning-outline",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "2675011",
+      "name": "消息",
+      "font_class": "bell",
+      "unicode": "62",
+      "unicode_decimal": 98
+    },
+    {
+      "icon_id": "10455020",
+      "name": "权限管理",
+      "font_class": "permission",
+      "unicode": "70",
+      "unicode_decimal": 112
+    },
+    {
+      "icon_id": "16618696",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e6bc",
+      "unicode_decimal": 59068
+    },
+    {
+      "icon_id": "5882682",
+      "name": "消息",
+      "font_class": "message",
+      "unicode": "ec3b",
+      "unicode_decimal": 60475
+    },
+    {
+      "icon_id": "1305461",
+      "name": "表格",
+      "font_class": "table",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "4766293",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e7ae",
+      "unicode_decimal": 59310
+    },
+    {
+      "icon_id": "9622759",
+      "name": "月亮",
+      "font_class": "qiepianx",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "16959734",
+      "name": "太阳",
+      "font_class": "taiyang",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "15394734",
+      "name": "时间",
+      "font_class": "shijian",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "22964729",
+      "name": "日期",
+      "font_class": "riqi",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "9520469",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "7738372",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "20229928",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "22959822",
+      "name": "展收",
+      "font_class": "zhanshou",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "19806729",
+      "name": "通知",
+      "font_class": "tongzhi",
+      "unicode": "e687",
+      "unicode_decimal": 59015
+    },
+    {
+      "icon_id": "1817740",
+      "name": "预览",
+      "font_class": "yulan",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "15343117",
+      "name": "删 除",
+      "font_class": "shanchu",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "4867071",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "17122687",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "22894332",
+      "name": "收起展开",
+      "font_class": "shouqizhankai",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "22957313",
+      "name": "up",
+      "font_class": "up",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "22957314",
+      "name": "down",
+      "font_class": "down",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "22957315",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "22957407",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}

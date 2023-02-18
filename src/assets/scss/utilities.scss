@@ -1,0 +1,335 @@
+// 颜色集
+$--ym-colors: (primary: $--ym-color-primary, info: $--ym-color-info, success: $--ym-color-success, warning: $--ym-color-warning, danger: $--ym-color-danger, error: $--ym-color-error);
+
+// media宽度集
+$--ym-grid-breakpoints: (all: 0, xs: 576px, sm: 768px, md: 992px, lg: 1200px, xl: 1920px);
+
+@mixin media-breakpoint-up($name, $breakpoints: $--ym-grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @if $min and $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@function breakpoint-infix($name, $breakpoints: $--ym-grid-breakpoints) {
+  $value: map-get($breakpoints, $name);
+  @return if($value and $value != 0, "-#{$name}", "");
+}
+
+// ===========================================================================================
+// 颜色
+// ===========================================================================================
+
+// 情境文本颜色
+.ym-text-primary { color: $--ym-color-primary; }
+.ym-text-info { color: $--ym-color-info; }
+.ym-text-success { color: $--ym-color-success; }
+.ym-text-warning { color: $--ym-color-warning; }
+.ym-text-danger { color: $--ym-color-danger; }
+.ym-text-error { color: $--ym-color-error; }
+
+// 背景颜色文本颜色
+.ym-bg-primary { background-color: mix($--color-white, $--ym-color-primary, 90%); }
+.ym-bg-info { background-color: mix($--color-white, $--ym-color-info, 90%); }
+.ym-bg-success { background-color: mix($--color-white, $--ym-color-success, 90%); }
+.ym-bg-warning { background-color: mix($--color-white, $--ym-color-warning, 90%); }
+.ym-bg-error { background-color: mix($--color-white, $--ym-color-error, 90%); }
+.ym-bg-danger { background-color: mix($--color-white, $--ym-color-danger, 90%); }
+
+// ===========================================================================================
+// 边框
+// ===========================================================================================
+
+.ym-border          { border: 1px solid $--ym-border-color-regular !important; }
+.ym-border-top      { border-top: 1px solid $--ym-border-color-regular !important; }
+.ym-border-right    { border-right: 1px solid $--ym-border-color-regular !important; }
+.ym-border-bottom   { border-bottom: 1px solid $--ym-border-color-regular !important; }
+.ym-border-left     { border-left: 1px solid $--ym-border-color-regular !important; }
+.ym-border-0        { border: 0 !important; }
+.ym-border-top-0    { border-top: 0 !important; }
+.ym-border-right-0  { border-right: 0 !important; }
+.ym-border-bottom-0 { border-bottom: 0 !important; }
+.ym-border-left-0   { border-left: 0 !important; }
+.ym-border-primary  { border-color: $--ym-color-primary !important; }
+.ym-border-info     { border-color: $--ym-color-info !important; }
+.ym-border-success  { border-color: $--ym-color-success !important; }
+.ym-border-warning  { border-color: $--ym-color-warning !important; }
+.ym-border-danger   { border-color: $--ym-color-danger !important; }
+.ym-border-error    { border-color: $--ym-color-error !important; }
+.ym-rounded-sm      { border-radius: $--ym-border-radius-small !important; }
+.ym-rounded         { border-radius: $--ym-border-radius-base !important; }
+.ym-rounded-top     { border-top-left-radius: $--ym-border-radius-base !important; border-top-right-radius: $--ym-border-radius-base !important; }
+.ym-rounded-right   { border-top-right-radius: $--ym-border-radius-base !important; border-bottom-right-radius: $--ym-border-radius-base !important; }
+.ym-rounded-bottom  { border-bottom-right-radius: $--ym-border-radius-base !important; border-bottom-left-radius: $--ym-border-radius-base !important; }
+.ym-rounded-left    { border-top-left-radius: $--ym-border-radius-base !important; border-bottom-left-radius: $--ym-border-radius-base !important; }
+.ym-rounded-circle  { border-radius: 50% !important; }
+.ym-rounded-pill  { border-radius: 50rem !important; }
+.ym-rounded-0  { border-radius: 0 !important; }
+
+// ===========================================================================================
+// 浮动
+// ===========================================================================================
+
+.ym-clearfix::after { display: block; clear: both; content: ""; }
+@each $breakpoint in map-keys($--ym-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+    .ym-float-#{$breakpoint}-left  { float: left !important; }
+    .ym-float-#{$breakpoint}-right { float: right !important; }
+    .ym-float-#{$breakpoint}-none  { float: none !important; }
+  }
+}
+
+
+// ===========================================================================================
+// 显示
+// ===========================================================================================
+
+@each $breakpoint in map-keys($--ym-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+    .ym-d#{$infix}-none          { display: none; }
+    .ym-d#{$infix}-inline        { display: inline; }
+    .ym-d#{$infix}-inline-block  { display: inline-block; }
+    .ym-d#{$infix}-block         { display: block; }
+    .ym-d#{$infix}-table         { display: table; }
+    .ym-d#{$infix}-table-cell    { display: table-cell; }
+    .ym-d#{$infix}-table-row     { display: table-row; }
+    .ym-d#{$infix}-flex          { display: flex; }
+    .ym-d#{$infix}-inline-flex   { display: inline-flex; }
+  }
+}
+
+// ===========================================================================================
+// 内嵌/媒体
+// ===========================================================================================
+
+.ym-embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: "";
+  }
+
+  &-item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  &-21by9::before { padding-top: percentage(9 / 21); }
+  &-16by9::before { padding-top: percentage(9 / 16); }
+  &-4by3::before { padding-top: percentage(3 / 4); }
+  &-1by1::before { padding-top: percentage(1 / 1); }
+}
+
+// ===========================================================================================
+// flex
+// ===========================================================================================
+
+// .ym-d-flex          { display: flex; }
+// .ym-d-inline-flex   { display: inline-flex; }
+@each $breakpoint in map-keys($--ym-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+    .ym-flex#{$infix}-row            { flex-direction: row !important; }
+    .ym-flex#{$infix}-column         { flex-direction: column !important; }
+    .ym-flex#{$infix}-row-reverse    { flex-direction: row-reverse !important; }
+    .ym-flex#{$infix}-column-reverse { flex-direction: column-reverse !important; }
+    .ym-flex#{$infix}-wrap         { flex-wrap: wrap !important; }
+    .ym-flex#{$infix}-nowrap       { flex-wrap: nowrap !important; }
+    .ym-flex#{$infix}-wrap-reverse { flex-wrap: wrap-reverse !important; }
+    .ym-flex#{$infix}-fill         { flex: 1 1 auto !important; }
+    .ym-flex#{$infix}-grow-0       { flex-grow: 0 !important; }
+    .ym-flex#{$infix}-grow-1       { flex-grow: 1 !important; }
+    .ym-flex#{$infix}-shrink-0     { flex-shrink: 0 !important; }
+    .ym-flex#{$infix}-shrink-1     { flex-shrink: 1 !important; }
+    .ym-justify-content#{$infix}-start   { justify-content: flex-start !important; }
+    .ym-justify-content#{$infix}-end     { justify-content: flex-end !important; }
+    .ym-justify-content#{$infix}-center  { justify-content: center !important; }
+    .ym-justify-content#{$infix}-between { justify-content: space-between !important; }
+    .ym-justify-content#{$infix}-around  { justify-content: space-around !important; }
+    .ym-align-items#{$infix}-start    { align-items: flex-start !important; }
+    .ym-align-items#{$infix}-end      { align-items: flex-end !important; }
+    .ym-align-items#{$infix}-center   { align-items: center !important; }
+    .ym-align-items#{$infix}-baseline { align-items: baseline !important; }
+    .ym-align-items#{$infix}-stretch  { align-items: stretch !important; }
+    .ym-align-content#{$infix}-start   { align-content: flex-start !important; }
+    .ym-align-content#{$infix}-end     { align-content: flex-end !important; }
+    .ym-align-content#{$infix}-center  { align-content: center !important; }
+    .ym-align-content#{$infix}-between { align-content: space-between !important; }
+    .ym-align-content#{$infix}-around  { align-content: space-around !important; }
+    .ym-align-content#{$infix}-stretch { align-content: stretch !important; }
+    .ym-align-self#{$infix}-auto     { align-self: auto !important; }
+    .ym-align-self#{$infix}-start    { align-self: flex-start !important; }
+    .ym-align-self#{$infix}-end      { align-self: flex-end !important; }
+    .ym-align-self#{$infix}-center   { align-self: center !important; }
+    .ym-align-self#{$infix}-baseline { align-self: baseline !important; }
+    .ym-align-self#{$infix}-stretch  { align-self: stretch !important; }
+  }
+}
+
+// ===========================================================================================
+// 交互（文本选择）
+// ===========================================================================================
+
+.ym-user-select-all  { user-select: all !important; }
+.ym-user-select-auto { user-select: auto !important; }
+.ym-user-select-none { user-select: none !important; }
+
+// ===========================================================================================
+// 溢出
+// ===========================================================================================
+
+.ym-overflow-auto   { overflow: auto !important; }
+.ym-overflow-hidden { overflow: hidden !important; }
+
+// ===========================================================================================
+// 定位
+// ===========================================================================================
+
+.ym-position-static   { position: static !important; }
+.ym-position-relative { position: relative !important; }
+.ym-position-absolute { position: absolute !important; }
+.ym-position-fixed    { position: fixed !important; }
+.ym-position-sticky   { position: sticky !important; }
+
+.ym-fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 100; }
+.ym-fixed-bottom { position: fixed; bottom: 0; right: 0; left: 0; z-index: 100; }
+@supports (position: sticky) {
+  .ym-sticky-top { position: sticky; top: 0; z-index: 100; }
+}
+
+// ===========================================================================================
+// 阴影
+// ===========================================================================================
+
+.ym-shadow-sm    { box-shadow: $--ym-box-shadow-small !important; }
+.ym-shadow       { box-shadow: $--ym-box-shadow-base !important; }
+.ym-shadow-none  { box-shadow: none !important; }
+
+// ===========================================================================================
+// 大小
+// ===========================================================================================
+
+.ym-w-25       { width: 25% !important; }
+.ym-w-50       { width: 50% !important; }
+.ym-w-100      { width: 100% !important; }
+.ym-w-auto     { width: auto !important; }
+.ym-h-25       { height: 25% !important; }
+.ym-h-50       { height: 50% !important; }
+.ym-h-100      { height: 100% !important; }
+.ym-h-auto     { height: auto !important; }
+.ym-mw-100     { max-width: 100% !important; }
+.ym-mh-100     { max-height: 100% !important; }
+.ym-min-vw-100 { min-width: 100vw !important; }
+.ym-min-vh-100 { min-height: 100vh !important; }
+.ym-vw-100     { width: 100vw !important; }
+.ym-vh-100     { height: 100vh !important; }
+
+// ===========================================================================================
+// 间隔
+// ===========================================================================================
+
+@each $breakpoint in map-keys($--ym-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+    @each $prop, $item in (margin: (m, $--ym-margin-base), padding: (p, $--ym-padding-base)) {
+      $abbrev: nth($item, 1);
+      $size-value: nth($item, 2);
+      @each $size, $value in (0: 0, 1: 0.25, 2: 0.5, 3: 1, 4: 1.5, 5: 2) {
+        $length: $size-value * $value;
+        .ym-#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+        .ym-#{$abbrev}t#{$infix}-#{$size},
+        .ym-#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .ym-#{$abbrev}r#{$infix}-#{$size},
+        .ym-#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .ym-#{$abbrev}b#{$infix}-#{$size},
+        .ym-#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .ym-#{$abbrev}l#{$infix}-#{$size},
+        .ym-#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+  }
+}
+
+// ===========================================================================================
+// 文本
+// ===========================================================================================
+
+// 对其
+@each $breakpoint in map-keys($--ym-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+    .ym-text#{$infix}-left { text-align: left; } // 左对其
+    .ym-text#{$infix}-center { text-align: center; } // 居中
+    .ym-text#{$infix}-right { text-align: right; } // 右对其
+    .ym-text#{$infix}-justify { text-align: justify; } // 两端对齐
+    .ym-text#{$infix}-nowrap { white-space: nowrap; } // 不进行换行
+  }
+}
+// 换行
+.ym-text-wrap { white-space: normal !important; }
+.ym-text-nowrap { white-space: nowrap !important }
+.ym-text-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+// 单词中断
+.ym-text-break { word-break: break-word !important; word-wrap: break-word !important; }
+// 文本转换
+.ym-text-lowercase { text-transform: lowercase; } // 小写
+.ym-text-uppercase { text-transform: uppercase; } // 大写
+.ym-text-capitalize { text-transform: capitalize; } // 单词首字母大写
+// 字体粗细和斜体
+.ym-font-weight-bold { font-weight: 700 !important; }
+.ym-font-weight-bolder { font-weight: bolder !important; }
+.ym-font-weight-normal { font-weight: 400 !important; }
+.ym-font-weight-light { font-weight: 300 !important; }
+.ym-font-weight-lighter { font-weight: lighter !important; }
+.ym-font-weight-italic { font-weight: italic !important; }
+// 等宽字体
+.ym-text-monospace { font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important; }
+// 重置颜色
+.ym-text-reset { color: inherit !important; }
+
+
+// ===========================================================================================
+// 垂直对齐
+// ===========================================================================================
+
+.ym-align-baseline { vertical-align: baseline !important; }
+.ym-align-top { vertical-align: top !important; }
+.ym-align-middle { vertical-align: middle !important; }
+.ym-align-bottom { vertical-align: bottom !important; }
+.ym-align-text-top { vertical-align: text-top !important; }
+.ym-align-text-bottom { vertical-align: text-bottom !important; }
+
+// ===========================================================================================
+// 可见性
+// ===========================================================================================
+
+.ym-visible { visibility: visible !important; }
+.ym-invisible { visibility: hidden !important; }

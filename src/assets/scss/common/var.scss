@@ -1,0 +1,71 @@
+
+// 主色调
+$--ym-color-primary: #00BA75 !default; // 主要
+
+// 状态颜色
+$--ym-color-info: #1890FF !default; // 信息
+$--ym-color-success: #54D62C !default; // 成功
+$--ym-color-warning: #FFC107 !default; // 警告
+$--ym-color-danger: #FF4842 !default; // 危险
+$--ym-color-error: #FF4842 !default; // 错误
+
+// 黑白灰
+$--ym-color-black: #000000 !default;
+$--ym-color-white: #ffffff !default; // 白色
+$--ym-color-grey: #919EAB !default; // 灰色
+$--ym-color-transparent: transparent !default; // 灰色
+
+// 灰度阶梯
+$--ym-color-grey-1: rgba($--ym-color-grey, 0.48) !default; // 主要
+$--ym-color-grey-2: rgba($--ym-color-grey, 0.40) !default; // 常规
+$--ym-color-grey-3: rgba($--ym-color-grey, 0.32) !default; // 次要
+$--ym-color-grey-4: rgba($--ym-color-grey, 0.24) !default; // 占位
+$--ym-color-grey-5: rgba($--ym-color-grey, 0.08) !default; // 背景
+
+// 文字
+$--ym-text-color-primary: #212B36 !default; // 主要（标题类文字）
+$--ym-text-color-regular: #637381 !default; // 常规（常规文字）
+$--ym-text-color-secondary: #919EAB !default; // 次要（次要文字）
+$--ym-text-color-placeholder: #C4CDD5 !default; // 占位
+
+// 背景
+$--ym-background-color: #ffffff !default; // 背景
+
+// 边框
+$--ym-border-color-primary: $--ym-color-grey-1 !default; // 主要（标题类文字）
+$--ym-border-color-regular: $--ym-color-grey-2 !default; // 常规（常规文字）
+$--ym-border-color-secondary: $--ym-color-grey-3 !default; // 次要（次要文字）
+
+// 字体大小
+$--ym-size-base: 14px !default;
+
+// 边距大小
+$--ym-margin-base: 24px !default;
+$--ym-padding-base: 24px !default;
+
+// 圆角大小
+$--ym-border-radius-base: 6px !default;
+$--ym-border-radius-small: 3px !default;
+$--ym-border-radius-circle: 100% !default;
+$--ym-border-radius-zero: 0 !default;
+
+// 投影
+$--ym-box-shadow-base: $--ym-color-grey-4 0px -2px 10px 0px, $--ym-color-grey-4 0px 16px 32px 0px !default;
+$--ym-box-shadow-small: $--ym-color-grey-4 0px -2px 10px 0px, $--ym-color-grey-4 0px 16px 32px 0px !default;
+
+// 动画
+$--ym-all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
+$--ym-fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--ym-fade-linear-transition: opacity 200ms linear !default;
+
+// 卡片
+$--ym-card-border-color: $--ym-border-color-regular !default;
+$--ym-card-border-radius: 16px !default;
+$--ym-card-padding: 24px !default;
+
+$--ym-font-h1-size: 64px !default;
+$--ym-font-h2-size: 48px !default;
+$--ym-font-h3-size: 32px !default;
+$--ym-font-h4-size: 24px !default;
+$--ym-font-h5-size: 20px !default;
+$--ym-font-h6-size: 18px !default;

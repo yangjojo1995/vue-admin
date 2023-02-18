@@ -1,0 +1,157 @@
+.el-row {
+  margin-bottom: 10px;
+}
+.c-flexs {
+  display: flex;
+  align-items: center;
+}
+.back {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  .back-span {
+    margin-left: 3px;
+  }
+  & > span {
+    margin-right: 40px;
+    &:hover {
+      cursor: pointer;
+      color: #00BA75;
+    }
+  }
+}
+
+.avatar-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .covers {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100px;
+      height: 100px;
+      margin-right: 21px;
+    }
+  }
+  .avatar-left {
+    img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      margin-right: 11px;
+      object-fit: contain;
+    }
+  }
+  
+  .avatar-left,
+  .avatar-status {
+    display: flex;
+    align-items: center;
+  }
+}
+.avatar-user {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+.b-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 33px;
+  margin-bottom: 18px;
+}
+.drawer-contetnt {
+  color: #919eab;
+  font-size: 12px;
+  p {
+    line-height: 1;
+  }
+}
+.sincerity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+.msg-item {
+  margin-left: 32px;
+}
+.el-drawer__wrapper::v-deep {
+  .el-drawer__header {
+    font-weight: bold;
+  }
+}
+.transverse-table {
+  border-collapse: collapse;
+  th, td {
+    height: 43px;
+    font-size: 13px;
+  }
+}
+.transverse-table, th, td {
+  border: 1px solid #EFEFEF;
+}
+.td-label {
+  background: #F6F7FA;
+  width:146px;
+  text-align: right;
+  padding-right: 20px;
+}
+.td-cotent {
+  text-align: left;
+  width: 474px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.msg-content {
+  padding: 6px 16px;
+  background: #F6F7FA;
+  font-size: 13px;
+  border-radius: 3px;
+  word-break: break-all;
+}
+.upload-img::v-deep {
+  .upload-image {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+}
+.el-card {
+  position: relative;
+}
+.submit-btn {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  z-index: 99;
+}
+.view-img-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    width: 60px;
+    height: auto;
+    margin-right: 12px;
+  }
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.ym-sign {
+  outline: none;
+  border: none;
+  font-size: 24px;
+  background: none;
+  width:100%;
+  word-break: break-all;
+}
+.signs {
+  margin-bottom: 10px;
+}

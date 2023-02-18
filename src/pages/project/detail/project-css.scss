@@ -1,0 +1,72 @@
+.project{
+  .title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    font-weight: bold;
+    margin: 36px 0 24px;
+  }
+
+  .table{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    border-top: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+
+    .table-group{
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin: 0;
+      min-height: 52px;
+
+      &.img-row{
+        height: 108px;
+        ::v-deep.table-group-value{
+          img{
+            max-height: 100px;
+            margin: 4px 8px;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .table-group-label{
+        position: relative;
+        width: 198px;
+        flex: 0 0 198px;
+        background: #F6F7FA;
+        padding: 0 16px;
+        box-sizing: border-box;
+        border-right: 1px solid #EFEFEF;
+        border-bottom: 1px solid #EFEFEF;
+      }
+
+      .table-group-value{
+        padding: 16px 24px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+        border-right: 1px solid #EFEFEF;
+        border-bottom: 1px solid #EFEFEF;
+
+      }
+    }
+  }
+}
+
+.flex-left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

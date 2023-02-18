@@ -1,0 +1,13 @@
+[0520/163050.910:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163050.940:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163050.965:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163051.176:ERROR:crashpad_client_win.cc(814)] not connected
+[0520/163051.246:ERROR:crashpad_client_win.cc(814)] not connected
+[0520/163051.278:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163051.343:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163101.739:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163101.767:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163101.795:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163126.570:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163126.597:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)
+[0520/163126.630:ERROR:registration_protocol_win.cc(106)] CreateFile: 系统找不到指定的文件。 (0x2)

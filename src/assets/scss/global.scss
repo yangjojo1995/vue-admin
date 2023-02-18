@@ -1,0 +1,39 @@
+// 变量
+@import '~./common/var';
+
+// element-ui
+@import '~./element-ui';
+
+// transition 动画
+@import '~./transition';
+
+// 公共类
+@import '~./utilities';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  margin: 0 auto;
+  color: $--ym-text-color-regular;
+  font-size: 14px;
+  line-height: 1.5em;
+  background-color: $--ym-background-color;
+  transition: filter 0.3s;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+// 选择文本
+::selection {
+  color: #FFFFFF;
+  background-color: $--ym-color-primary;
+  text-shadow: none;
+}

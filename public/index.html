@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 使用 CDN 加速的 CSS 文件，配置在 vue.config.js 下 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>
+    <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="preload" as="style">
+    <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet">
+    <% } %>
+    <!-- 使用 CDN 加速的 JS 文件，配置在 vue.config.js 下 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
+    <link href="<%= htmlWebpackPlugin.options.cdn.js[i] %>" rel="preload" as="script">
+    <% } %>
+    <title><%= typeof VUE_APP_TITLE === 'string' ? VUE_APP_TITLE : '' %></title>
+    <style>
+      .app-loading{text-align:center;padding-top:10%;display:block}
+      .app-loading span{display:inline-block;vertical-align:middle;width:.6em;height:.6em;margin:.19em;background:#007db6;border-radius:.6em;-webkit-animation:app-loading 1s infinite alternate;-moz-animation:app-loading 1s infinite alternate;-o-animation:app-loading 1s infinite alternate;-ms-animation:app-loading 1s infinite alternate;animation:app-loading 1s infinite alternate}
+      .app-loading span:nth-of-type(2){background:#008fb2;-webkit-animation-delay:.2s;-moz-animation-delay:.2s;-o-animation-delay:.2s;-ms-animation-delay:.2s;animation-delay:.2s}
+      .app-loading span:nth-of-type(3){background:#009b9e;-webkit-animation-delay:.4s;-moz-animation-delay:.4s;-o-animation-delay:.4s;-ms-animation-delay:.4s;animation-delay:.4s}
+      .app-loading span:nth-of-type(4){background:#00a77d;-webkit-animation-delay:.4s;-moz-animation-delay:.6s;-o-animation-delay:.6s;-ms-animation-delay:.6s;animation-delay:.6s}
+      .app-loading span:nth-of-type(5){background:#00b247;-webkit-animation-delay:.8s;-moz-animation-delay:.8s;-o-animation-delay:.8s;-ms-animation-delay:.8s;animation-delay:.8s}
+      .app-loading span:nth-of-type(6){background:#5ab027;-webkit-animation-delay:1.0s;-moz-animation-delay:1.0s;-o-animation-delay:1.0s;-ms-animation-delay:1.0s;animation-delay:1.0s}
+      .app-loading span:nth-of-type(7){background:#a0b61e;-webkit-animation-delay:1.2s;-moz-animation-delay:1.2s;-o-animation-delay:1.2s;-ms-animation-delay:1.2s;animation-delay:1.2s}
+      @-webkit-keyframes app-loading{0%{opacity:0}100%{opacity:1}}
+      @-moz-keyframes app-loading{0%{opacity:0}100%{opacity:1}}
+      @-o-keyframes app-loading{0%{opacity:0}100%{opacity:1}}
+      @-ms-keyframes app-loading{0%{opacity:0}100%{opacity:1}}
+      @keyframes app-loading{0%{opacity:0}100%{opacity:1}}
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <div class="app-loading">
+        <h2>玩命加载中...</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- 覆盖配置 -->
+    <script src="<%= BASE_URL %>config.js"></script>
+    <!-- 使用 CDN 加速的 JS 文件，配置在 vue.config.js 下 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+    <% } %>
+    <!-- built files will be auto injected -->
+
+  </body>
+</html>
